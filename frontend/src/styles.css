@@ -1,4 +1,9 @@
-h1,
-h2 {
-  color: blue;
+/* Nav Component */
+header {
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
 }
