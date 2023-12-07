@@ -20,6 +20,7 @@ header nav div {
   width: 200px;
   border-radius: 7px;
   transition: background-color .2s, color .2s;
+  padding: 10px;
 }
 
 header nav div:hover {
