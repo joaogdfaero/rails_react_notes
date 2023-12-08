@@ -9,9 +9,9 @@ export const App = (props) => {
   return <>
   <Nav/>
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path = "/auth/:form" component={Auth}/>
-    <Route exact path = "/dashboard" component={Dashboard}/>
+    <Route path="/" element={ <Home/> } />
+    <Route path = "/auth/:form" exact element={ <Auth/> }/>
+    <Route exact path = "/dashboard" element={ <Dashboard/> }/>
   </Routes>
   </>;
 };
