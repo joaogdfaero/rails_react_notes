@@ -30,8 +30,10 @@ const Auth = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("Submitting action:", actions[type]); // Add this line for debugging
     dispatch(actions[type]);
   };
+  
 
   return (
     <div>

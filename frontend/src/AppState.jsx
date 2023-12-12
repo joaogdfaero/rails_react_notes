@@ -10,14 +10,15 @@ const initialState = {
 // REDUCER
 // action = {type: "", payload: ---}
 const reducer = (state, action) => {
+    console.log('action:', action); // Add this line to log the action
     switch(action.type){
         case "signup":
-            fetch(state.urk + "/users/", {
+            fetch(state.url + "/users/", {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify[action.payload]
+                body: JSON.stringify(action.payload)
             }
             )
             .then(responde => Response.json())
@@ -28,14 +29,16 @@ const reducer = (state, action) => {
                     username: user.username
                 }
             })
-        
+
+        break
+
         case "login":
-            fetch(state.urk + "/login/", {
+            fetch(state.url + "/login/", {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify[action.payload]
+                body: JSON.stringify(action.payload)
             }
             )
             .then(responde => Response.json())
@@ -46,6 +49,8 @@ const reducer = (state, action) => {
                     username: user.username
                 }
             })
+
+        break
 
         default:
             return state
