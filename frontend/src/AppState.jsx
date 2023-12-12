@@ -8,9 +8,10 @@ const initialState = {
 }
 
 // REDUCER
-// action = {type: "", payload: ---}
+//action = {type: "", payload: ---}
 const reducer = (state, action) => {
     console.log('action:', action); // Add this line to log the action
+    console.log('state:', state);
     switch(action.type){
         case "signup":
             fetch(state.url + "/users/", {
@@ -21,7 +22,7 @@ const reducer = (state, action) => {
                 body: JSON.stringify(action.payload)
             }
             )
-            .then(responde => Response.json())
+            .then(responde => response.json())
             .then(user => {
                 return {
                     ...state,
@@ -41,7 +42,7 @@ const reducer = (state, action) => {
                 body: JSON.stringify(action.payload)
             }
             )
-            .then(responde => Response.json())
+            .then(responde => response.json())
             .then(user => {
                 return {
                     ...state,
