@@ -14,12 +14,12 @@ const Auth = () => {
   const { dispatch } = useAppState();
 
   const actions = {
-    signup: {
-      action: "signup",
+    signsdup: {
+      type: "signup",
       payload: formData
     },
     login: {
-      action: "login",
+      type: "login",
       payload: formData
     }
   };
