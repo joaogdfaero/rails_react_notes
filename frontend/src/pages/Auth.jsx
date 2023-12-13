@@ -56,7 +56,7 @@ const Auth = () => {
   };
   
   return (
-    <div>
+    <div className="auth">
       <form onSubmit={handleSubmit}>
         <input
           type="text"

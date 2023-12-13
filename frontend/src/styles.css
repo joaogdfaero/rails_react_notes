@@ -28,3 +28,21 @@ header nav div:hover {
   color: crimson;
 }
 
+/* Login Form */
+.auth form {
+  padding: 50px;
+}
+
+.auth form input {
+  background-color: crimson;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
+
