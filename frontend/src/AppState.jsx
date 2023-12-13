@@ -10,53 +10,17 @@ const initialState = {
 // REDUCER
 //action = {type: "", payload: ---}
 const reducer = (state, action) => {
-    console.log('action:', action); // Add this line to log the action
-    console.log('state:', state);
-    switch(action.type){
-        case "signup":
-            fetch(state.url + "/users/", {
-                method: "post",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(action.payload)
-            }
-            )
-            .then(responde => response.json())
-            .then(user => {
-                return {
-                    ...state,
-                    token: user.token,
-                    username: user.username
-                }
-            })
-
-        break
-
-        case "login":
-            fetch(state.url + "/login/", {
-                method: "post",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(action.payload)
-            }
-            )
-            .then(responde => response.json())
-            .then(user => {
-                return {
-                    ...state,
-                    token: user.token,
-                    username: user.username
-                }
-            })
-
-        break
-
+    let newState;
+    switch (action.type) {
+        case "auth":
+            newState = { ...state, ...action.payload };
+            return newState;
+            break
         default:
-            return state
+            return state;
+            break;
     }
-}
+};
 
 // APPCONTEXT
 const AppContext = React.createContext(null)
