@@ -1,10 +1,13 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import { useAppState } from "../AppState.jsx";
 
 const Auth = () => {
   const { form } = useParams();
   const type = form || "enter";
+
+  const navigate = useNavigate();
 
   const [formData, setFormData] = React.useState({
     username: "",
@@ -17,9 +20,12 @@ const Auth = () => {
 
   React.useEffect(() => {
     if (userData) {
-      console.log(user)
+      console.log(userData)
       const {token, user } = userData;
       dispatch({ type: "auth", payload: {token, username: user.username}});
+      window.localStorage.setItem("auth", JSON.stringify({token, username: user.username}))
+      // Redirect to /dashboard after setting localStorage
+      navigate("/dashboard");
     }
   }, [userData]);
 
