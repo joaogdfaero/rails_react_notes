@@ -15,10 +15,3 @@ root.render(
   </AppState>
 );
 
-{/* <AppState>
-<Router>
-    <Routes>
-        <Route path="/" exact element={<App />} />
-    </Routes>
-</Router>
-</AppState> */}
