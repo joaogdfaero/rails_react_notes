@@ -1,10 +1,24 @@
 import React from "react";
 import ReactDom from "react-dom";
 import "./styles.css";
-import {App} from "./components/App.js"
+import { App } from "./components/App.js";
 import { createRoot } from "react-dom/client";
-import {BrowserRouter as Router} from "react-router-dom"
-import {AppState} from "./AppState.jsx"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AppState } from "./AppState.jsx";
 
 const root = createRoot(document.querySelector("#root"));
-root.render(<AppState><Router><App/></Router></AppState>)
+root.render(
+  <AppState>
+    <Router>
+      <App/> 
+    </Router>
+  </AppState>
+);
+
+{/* <AppState>
+<Router>
+    <Routes>
+        <Route path="/" exact element={<App />} />
+    </Routes>
+</Router>
+</AppState> */}
