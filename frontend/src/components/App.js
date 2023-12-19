@@ -15,11 +15,6 @@ export const App = () => {
 
     console.log('Authentication Status:', auth);
 
-    // Aparentemente funciona. Porém, como eu tenho autenticação meu storage, ele fica navegando para
-    // a dashboard toda vez que clico em alguma coisa. Fazer um logout que nem aqui aos 28 min talvez
-    // resolva:
-    // https://youtu.be/t6trwLxgd3U?si=ghDK94EAdiD0q5sG
-
     // Check if the user is authenticated and navigate accordingly
     if (auth) {
       console.log('User is authenticated. Navigating to dashboard.');

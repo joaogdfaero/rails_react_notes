@@ -24,6 +24,7 @@ const Auth = () => {
       const {token, user } = userData;
       dispatch({ type: "auth", payload: {token, username: user.username}});
       window.localStorage.setItem("auth", JSON.stringify({token, username: user.username}))
+      
       // Redirect to /dashboard after setting localStorage
       navigate("/dashboard");
     }
