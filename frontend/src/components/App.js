@@ -16,14 +16,14 @@ export const App = () => {
     console.log('Authentication Status:', auth);
 
     // Check if the user is authenticated and navigate accordingly
-    if (auth) {
-      console.log('User is authenticated. Navigating to dashboard.');
-      dispatch({ type: "auth", payload: auth });
-      navigate("/dashboard");
-    } else {
-      console.log('User is not authenticated. Navigating to home.');
-      navigate("/");
-    }
+    // if (auth) {
+    //   console.log('User is authenticated. Navigating to dashboard.');
+    //   dispatch({ type: "auth", payload: auth });
+    //   navigate("/dashboard");
+    // } else {
+    //   console.log('User is not authenticated. Navigating to home.');
+    //   navigate("/");
+    // }
   }, [navigate, dispatch]);
 
   return (
