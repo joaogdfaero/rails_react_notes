@@ -15,7 +15,7 @@ export const App = () => {
 
     console.log('Authentication Status:', auth);
 
-    // Check if the user is authenticated and navigate accordingly
+    //Check if the user is authenticated and navigate accordingly -> BUG: fica redirecionando para dashboard ou home sempre
     // if (auth) {
     //   console.log('User is authenticated. Navigating to dashboard.');
     //   dispatch({ type: "auth", payload: auth });

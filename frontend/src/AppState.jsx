@@ -4,8 +4,17 @@ import React, {useContext, useReducer} from "react"
 const initialState = {
     url: "http://localhost:3000",
     token: null,
-    username: null
-}
+    username: null,
+    notes: null,
+    blank: {
+        title: "",
+        body: "",  
+    },
+    selected: {
+        title: "",
+        body: "",  
+    } 
+};
 
 // REDUCER
 //action = {type: "", payload: ---}
@@ -15,11 +24,16 @@ const reducer = (state, action) => {
         case "auth":
             newState = { ...state, ...action.payload };
             return newState;
-            break
+            break;
         case "logout":
             newState = { ...state, token: null, username: null};
             window.localStorage.removeItem("auth")
             return newState;
+            break;
+        case "getNotes":
+            newState = {...state, notes: action.payload}
+            return newState
+            break;
         default:
             return state;
             break;
