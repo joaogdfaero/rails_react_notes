@@ -6,11 +6,12 @@ const initialState = {
     token: null,
     username: null,
     notes: null,
-    blank: {
+    new: {
         title: "",
         body: "",  
     },
-    selected: {
+    edit: {
+        id : 0,
         title: "",
         body: "",  
     } 
