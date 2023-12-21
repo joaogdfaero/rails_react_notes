@@ -8,6 +8,8 @@ const Form = (props) => {
     const { action } = useParams();
     const [formData, setFormData] = React.useState(state[action]);
 
+    console.log("Form component mounted");
+
     const navigate = useNavigate();
 
     const actions = {

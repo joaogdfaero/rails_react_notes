@@ -24,6 +24,7 @@ export const App = () => {
     //   console.log('User is not authenticated. Navigating to home.');
     //   navigate("/");
     // }
+
   }, [navigate, dispatch]);
 
   return (
@@ -34,7 +35,6 @@ export const App = () => {
         <Route path="/auth/:form" exact element={<Auth />} />
         {/* Wrap Dashboard with ErrorBoundary */}
         <Route
-          exact
           path="/dashboard"
           element={
             <ErrorBoundary>
@@ -46,6 +46,8 @@ export const App = () => {
     </>
   );
 };
+
+// bug: https://chat.openai.com/c/d3809ff3-920b-42da-be07-9730c6ab7fa3
 
 
 

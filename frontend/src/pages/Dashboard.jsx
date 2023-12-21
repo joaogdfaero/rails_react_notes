@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, useLoaderData } from "react-router";
 import { useAppState } from "../AppState.jsx";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch, useParams } from "react-router-dom";
 import Form from "../components/Form.jsx";
 
 
@@ -9,6 +9,9 @@ const Dashboard = (props) => {
 
     const {state, dispatch} = useAppState()
     const {token, url, notes, username} = state
+
+    const { action } = useParams();
+    console.log("Action:", action);
 
     const getNotes = async () => {
         const response = await fetch(url + "/notes/", {
