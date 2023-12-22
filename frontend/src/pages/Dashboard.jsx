@@ -8,10 +8,13 @@ import Form from "../components/Form.jsx";
 const Dashboard = (props) => {
 
     const {state, dispatch} = useAppState()
-    const {token, url, notes, username} = state
+    const {token, url, notes, username} = state;
 
-    const { action } = useParams();
+    const { action } = props;
+    console.log("Action in Dashboard:", action);
+
     console.log("Action:", action);
+    console.log("Props:", props);
 
     const getNotes = async () => {
         const response = await fetch(url + "/notes/", {
@@ -20,21 +23,32 @@ const Dashboard = (props) => {
                 Authorization: "bearer " + token
             }
         })
-        const notes = await response.json()
-        dispatch({type: "getNotes", payload: notes})  
+        const fetchedNotes = await response.json()
+        dispatch({type: "getNotes", payload: fetchedNotes})  
     }
   
-    React.useEffect(() => {getNotes()}, [])
+    React.useEffect(() => {getNotes();
+        console.log("Action in useEffect:", action);
+    }, [action])
 
-    const loaded = () => (
+    const loaded = () => {
+
+        console.log("Dashboard loaded");
+        console.log("State:", state);
+
+        return (
         <div className ="dashboard">
             <h1>Anotações de {username}</h1>
             <Link to="/dashboard/new"><button>New Note</button></Link>
             <Routes>
-                <Route path="/dashboard/:action" render={(rp) => <Form {...rp} getNotes={getNotes} />}/>
+                <Route
+                    path="/dashboard/new"
+                    element={<Form getNotes={getNotes} />}
+                />
             </Routes>
+
             <ul>
-                {notes.map((note) => (
+                {state.notes.map((note) => (
                     <div className="note" key={note.id}>
                         <h2>{note.title}</h2>
                         <h4>{note.body}</h4>
@@ -42,9 +56,9 @@ const Dashboard = (props) => {
                 ))}
             </ul>
         </div>
-    );
+    )};
     
-    return notes ? loaded() : <h1>Loading...</h1>;
+    return state.notes ? loaded() : <h1>Loading...</h1>;
 }
 
 export default Dashboard

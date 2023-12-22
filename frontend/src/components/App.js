@@ -35,7 +35,7 @@ export const App = () => {
         <Route path="/auth/:form" exact element={<Auth />} />
         {/* Wrap Dashboard with ErrorBoundary */}
         <Route
-          path="/dashboard"
+          path="/dashboard/*"
           element={
             <ErrorBoundary>
               <Dashboard />
@@ -48,7 +48,5 @@ export const App = () => {
 };
 
 // bug: https://chat.openai.com/c/d3809ff3-920b-42da-be07-9730c6ab7fa3
-
-
 
 
