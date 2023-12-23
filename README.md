@@ -13,7 +13,7 @@
 <h3 align="center">Rails React Notes</h3>
 
   <p align="center">
-    A fullstack project made of a very simple note taking website built with Rails on the Backend and React on the Front-end.
+    A Fullstack project made of a very simple note taking website built with Rails on the Backend and React on the Front-end.
      <br />
     <br />
     <br />
