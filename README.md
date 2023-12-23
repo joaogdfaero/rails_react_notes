@@ -36,34 +36,10 @@
 
 ## Demonstration video 📺
 
-https://github.com/joaogdfaero/rails_react_notes/assets/103076610/975b39a4-ff36-4116-921d-04e0517d2ddc
+https://github.com/joaogdfaero/rails_react_notes/assets/103076610/f567cde0-e97d-42e2-92e4-7298d15a2c42
 
 
-## How to use 
-
-# 1 - Create your account.
-
-![image](https://github.com/joaogdfaero/rails_react_notes/assets/103076610/1bc60414-fdcd-4c00-a767-73476a7195c0)
-
-
-# 2 - Onced logged in, click on "Sell (Vender)" to sell your item.
-
-![image](https://github.com/joaogdfaero/rails_react_notes/assets/103076610/f9bb2f26-a56d-4142-8428-8b0412f4ed78)
-
-
-# 3 - Add the information, description and photo of your item.
-
-![image](https://github.com/joaogdfaero/rails_react_notes/assets/103076610/e16182a9-3997-43b6-a6b1-89c198eeb849)
-
-
-# 3 - Click on any instrument to check it's description. Click on "Add to Chart (Adicionar ao Carrinho)" to buy the Item;
-
-![image](https://github.com/joaogdfaero/rails_react_notes/assets/103076610/758a69eb-9097-434f-852e-4c3aa2e27d1e)
-
-
-# 4 - Manage instruments in your shopping cart.
-
-![image](https://github.com/joaogdfaero/rails_react_notes/assets/103076610/2e02d84a-6d48-47cd-8b92-10bbce5c5748)
+2d84a-6d48-47cd-8b92-10bbce5c5748)
 
 
 
@@ -71,25 +47,6 @@ https://github.com/joaogdfaero/rails_react_notes/assets/103076610/975b39a4-ff36-
 * Ruby 3.1.4
 * Rails 7.0.4
 * PostgreSQL 14.9
-
-## Installation
-1. **Clone this repository**  
-` git clone https://github.com/joaogdfaero/rails_react_notes.git`
-
-2. **Navigate to the project folder**  
-` cd rails_react_notes `
-
-3. **Install the necessary gems**  
-` bundle install`
-
-4. **Populate the database**  
-` rails db:seed`
-
-5. **Run the application server**  
-` rails s `
-
-6. **The server will start on port: 3000 - access:**    
-` http://localhost:3000 `
 
 ##
 <br>Author: <strong>João Gabriel Dal Forno (joao.dal@acad.ufsm.br)</strong>
