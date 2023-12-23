@@ -27,7 +27,7 @@
 ## Languages:
 ● Backend: Ruby 🔻 (user authentication and note creation API and database);
 
-● Frontend: React ⚛ (visual);
+● Frontend: React ⚛;
 
 ## Project Requirements :ballot_box_with_check:
 ● User registration and login;
