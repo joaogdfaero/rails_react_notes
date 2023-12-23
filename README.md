@@ -51,6 +51,7 @@ https://github.com/joaogdfaero/rails_react_notes/assets/103076610/f567cde0-e97d-
 ## Technologies
 * Ruby 3.1.4
 * Rails 7.0.4
+* React 18.1.0
 * PostgreSQL 14.9
 
 ##
