@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joaogdfaero/rails_react_notes/">
-    <img src="https://github.com/joaogdfaero/rails_react_notes/blob/main/notetaking.png" alt="Logo" width="200" height="200">
+    <img src="https://github.com/joaogdfaero/rails_react_notes/blob/main/notetaking.png" alt="Logo" width="170" height="170">
   </a>
 
 <h3 align="center">Rails React Notes</h3>
