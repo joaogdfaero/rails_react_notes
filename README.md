@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joaogdfaero/rails_react_notes/">
-    <img src="guitarstoreicon-removebg-preview.png" alt="Logo" width="220" height="220">
+    <img src="https://github.com/joaogdfaero/rails_react_notes/blob/main/notetaking.png" alt="Logo" width="220" height="220">
   </a>
 
 <h3 align="center">Rails React Notes</h3>
