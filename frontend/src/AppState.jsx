@@ -1,60 +1,78 @@
-import React, {useContext, useReducer} from "react"
+import React, { useContext, useReducer } from "react";
 
+//////////////////////
 // INITIAL STATE
+//////////////////////
+
 const initialState = {
-    url: "http://localhost:3000",
-    token: null,
-    username: null,
-    notes: null,
-    new: {
-        title: "",
-        body: "",  
-    },
-    edit: {
-        id : 0,
-        title: "",
-        body: "",  
-    } 
+  url: "http://localhost:3000",
+  token: null,
+  username: null,
+  notes: null,
+  new: {
+    title: "",
+    body: "",
+  },
+  edit: {
+    id: 0,
+    title: "",
+    body: "",
+  },
 };
 
+///////////////////////
 // REDUCER
-//action = {type: "", payload: ---}
+///////////////////////
+// action = {type: "", payload: ---}
 const reducer = (state, action) => {
-    let newState;
-    switch (action.type) {
-        case "auth":
-            newState = { ...state, ...action.payload };
-            return newState;
-            break;
-        case "logout":
-            newState = { ...state, token: null, username: null};
-            window.localStorage.removeItem("auth")
-            return newState;
-            break;
-        case "getNotes":
-            newState = {...state, notes: action.payload}
-            return newState
-            break;
-        default:
-            return state;
-            break;
-    }
+  let newState;
+  switch (action.type) {
+    case "auth":
+      newState = { ...state, ...action.payload };
+      return newState;
+      break;
+    case "logout":
+      newState = { ...state, token: null, username: null };
+      window.localStorage.removeItem("auth");
+      return newState;
+      break;
+    case "getNotes":
+      newState = { ...state, notes: action.payload };
+      return newState;
+      break;
+    case "select":
+      newState = { ...state, edit: action.payload };
+      return newState;
+      break;
+    default:
+      return state;
+      break;
+  }
 };
 
-// APPCONTEXT
-const AppContext = React.createContext(null)
+////////////////////
+// AppContext
+////////////////////
+const AppContext = React.createContext(null);
 
-// APPSTATECOMPONENT
+////////////////////
+// AppState Component
+////////////////////
 export const AppState = (props) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-    const [state, dispatch] = useReducer(reducer, initialState)
+  return (
+    <AppContext.Provider value={{ state, dispatch }}>
+      {props.children}
+    </AppContext.Provider>
+  );
+};
 
-    return <AppContext.Provider value={{state, dispatch}}>{props.children}</AppContext.Provider>
-}
-
+////////////////////
 //useAppState hook
-export const useAppState = () => {
-    return React.useContext(AppContext)
-}
+////////////////////
 
+export const useAppState = () => {
+  return React.useContext(AppContext);
+};
  

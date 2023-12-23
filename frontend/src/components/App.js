@@ -19,12 +19,11 @@ export const App = () => {
     // if (auth) {
     //   console.log('User is authenticated. Navigating to dashboard.');
     //   dispatch({ type: "auth", payload: auth });
-    //   navigate("/dashboard");
+    //   navigate("/dashboard/new");
     // } else {
     //   console.log('User is not authenticated. Navigating to home.');
     //   navigate("/");
     // }
-
   }, [navigate, dispatch]);
 
   return (
@@ -36,7 +35,7 @@ export const App = () => {
         {/* Wrap Dashboard with ErrorBoundary */}
         <Route
           path="/dashboard/*"
-          element={
+          exact element={
             <ErrorBoundary>
               <Dashboard />
             </ErrorBoundary>
@@ -46,7 +45,3 @@ export const App = () => {
     </>
   );
 };
-
-// bug: https://chat.openai.com/c/d3809ff3-920b-42da-be07-9730c6ab7fa3
-
-
