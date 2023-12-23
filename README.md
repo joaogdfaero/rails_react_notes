@@ -43,11 +43,6 @@
 
 https://github.com/joaogdfaero/rails_react_notes/assets/103076610/f567cde0-e97d-42e2-92e4-7298d15a2c42
 
-
-2d84a-6d48-47cd-8b92-10bbce5c5748)
-
-
-
 ## Technologies
 * Ruby 3.1.4
 * Rails 7.0.4
