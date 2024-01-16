@@ -38,7 +38,6 @@
 
 ● Users can see all the notes on dashboard.
 
-
 ## Demonstration video 📺
 
 https://github.com/joaogdfaero/rails_react_notes/assets/103076610/f567cde0-e97d-42e2-92e4-7298d15a2c42
